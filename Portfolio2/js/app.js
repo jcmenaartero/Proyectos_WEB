@@ -5,6 +5,9 @@ function iniciar() {
     let menu = $("header nav#principal a");
     $(menu).on('click',cargar)
     $("header #navicon").on('click', mostrarmenu);
+    $("head").append('<link rel="stylesheet" type="text/css" href="css/inicio.css">');
+    $("header nav#principal a#inicio").addClass("active");
+    $("main").load("html/inicio.html");
 }
 
 function mostrarmenu(){
@@ -19,7 +22,7 @@ function cargar() {
     console.log(estilo);
     $(this).siblings().removeClass("active");
     $(this).addClass("active");
-
+    console.log(this)
     let ruta = "html/"+id+".html";
     console.log(ruta)
     $("main").load(ruta)
