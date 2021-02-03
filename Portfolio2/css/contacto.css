@@ -14,6 +14,9 @@
 
     main{
         background-image: radial-gradient(circle at 16.49% 30.65%, #ff4187 0, #ff3094 10%, #ff1f9e 20%, #ff0fa3 30%, #f704a4 40%, #d3019f 50%, #ae0598 60%, #8d0e91 70%, #6e158b 80%, #501a85 90%, #311d81 100%);    
+        min-height: 600px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     } 
         main div.container{
             background-color: white;

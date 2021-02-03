@@ -8,10 +8,22 @@ function iniciar() {
     $("head").append('<link rel="stylesheet" type="text/css" href="css/inicio.css">');
     $("header nav#principal a#inicio").addClass("active");
     $("main").load("html/inicio.html");
+    $("header div#logo").on('click',home);
+    if($(window).innerWidth() <= 900) {
+        $("header #principal").slideUp(0);
+    }
+    
 }
 
 function mostrarmenu(){
     $("header #principal").slideToggle();
+}
+
+function home() {
+    $("main").load("html/inicio.html");
+    $("head").append('<link rel="stylesheet" type="text/css" href="css/inicio.css">');
+    $("header nav#principal a#inicio").addClass("active");
+    $("header nav#principal a#inicio").siblings().removeClass("active");
 }
 
 function cargar() {

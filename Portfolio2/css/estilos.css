@@ -22,6 +22,10 @@
             align-items: center;
         }
 
+        header a#navicon:hover{
+            background-color: rgba(95, 95, 95, 0.2);
+        }
+
             header a#navicon i{
                 font-size: 24pt;
                 color: white;
@@ -36,6 +40,11 @@
             background-position: center;
         }
 
+        header div#logo:hover{
+            cursor: pointer;
+            background-color: rgba(95, 95, 95, 0.2);
+        }
+
         header nav#principal{
             grid-column: 1/3;
             grid-row: 2/3;
@@ -48,6 +57,10 @@
                 padding-left: 10px;
                 display: flex;
                 align-items: center;
+            }
+
+            header nav#principal a:hover{
+                background-color: rgba(95, 95, 95, 0.2);
             }
 
                 header nav#principal a i{

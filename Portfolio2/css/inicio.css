@@ -13,12 +13,15 @@
     }
 
     main{
-        
-        background-image: radial-gradient(circle at 22.3% 30.61%, #ffab00 0, #ff991d 10%, #ff862e 20%, #ff723a 30%, #ff5c42 40%, #f94646 50%, #e33049 60%, #ce1a4b 70%, #bc014e 80%, #ab0051 90%, #9d0054 100%);    }
+        background-image: radial-gradient(circle at 22.3% 30.61%, #ffab00 0, #ff991d 10%, #ff862e 20%, #ff723a 30%, #ff5c42 40%, #f94646 50%, #e33049 60%, #ce1a4b 70%, #bc014e 80%, #ab0051 90%, #9d0054 100%);    
+        min-height: 600px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
         main div.container{
             background-color: white;
-            min-height: 500px;
+            box-shadow: 2px 2px black;
         }
 
 }
