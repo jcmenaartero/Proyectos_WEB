@@ -20,9 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `libreria`
 --
-
+CREATE DATABASE `libreria`;
 -- --------------------------------------------------------
-
+USE `libreria`;
 --
 -- Estructura de tabla para la tabla `categorias`
 --
