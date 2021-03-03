@@ -17,6 +17,8 @@ $app->group('/api', function(RouteCollectorProxy $group){
     });
 });
 
+$app->run();
+
 
 
 
