@@ -16,7 +16,6 @@ $app->get("/libros", function(Request $request, Response $response, $args) {
     return $response;
 });
 
-$app->run();
 
 
 
