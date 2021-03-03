@@ -11,14 +11,14 @@ require __DIR__ . '/../../vendor/autoload.php';
 // creamos la aplicación php
 $app = AppFactory::create();
 $app->setBasePath("/libreria/apilibreria/public/index.php");
-$app->get("/hello", function(Request $request, Response $response, $args) {
+/*$app->get("/hello", function(Request $request, Response $response, $args) {
     $response->getBody()->write("Hello world!");
     return $response;
-});
+});*/
  
 //Cargamos en memoria los archivos de rutas que contendrán los entrypoints a cada una de las tablas.
 //los entrypoints harán referencia a las acciones CRUD de una tabla de nuestra BD
-//require __DIR__ . "/../Routes/libros.php";
+require __DIR__ . "/../Routes/libros.php";
 $app->run();
 
 
