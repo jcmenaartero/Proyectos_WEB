@@ -11,10 +11,10 @@ class LibrosModel {
     public static function conexionDB(){
         LibrosModel::$DB = new DB();
     }
-    /*public static function getFilter($sql, $param){
+    public static function getFilter($sql, $param){
         $data = LibrosModel::$DB->run($sql, $param);
         return $data->fetchAll();
-    }*/
+    }
 
     public static function getAll(){
         LibrosModel::conexionDB();
