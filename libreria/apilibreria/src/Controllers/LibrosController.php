@@ -17,8 +17,8 @@
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             var_dump($parametros);
-            $precio = $parameros['precio'];
-            $nombre = $paramameetros['nombre_libro'];
+            $precio = $parametros['precio'];
+            $nombre = $parametros['nombre_libro'];
             echo $nombre. " " .$precio;
         }
         
