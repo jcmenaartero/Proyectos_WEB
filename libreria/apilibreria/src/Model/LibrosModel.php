@@ -11,7 +11,7 @@ class LibrosModel {
     public static function conexionDB(){
         LibrosModel::$DB = new DB();
     }
-    public static function getFilter($sql, $param){
+    public static function getFilter($param){
         LibrosModel::conexionDB();
         $sql = 'SELECT * FROM libros WHERE precio > ?';
         $data = LibrosModel::$DB->run($sql, $param);
