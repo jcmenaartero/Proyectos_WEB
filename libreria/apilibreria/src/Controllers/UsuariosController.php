@@ -34,7 +34,7 @@
         }
 
         public function drop(Request  $request, Response $response, $args){
-            $parametros = $request->getParsedBody();
+            $parametros = $request->getQueryParams();
 
             $id = (int)$parametros['id'];
 
