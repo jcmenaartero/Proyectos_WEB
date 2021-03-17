@@ -17,7 +17,8 @@
             
             $param = array($id,$nombre,$apellidos,$direccion,$ciudad,$nac);
             $usuario = UsuariosModel::new($param);
-            $response->getBody()->write($usuario);
+            $usuarioJson = json_encode($usuario);
+            $response->getBody()->write($usuarioJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
