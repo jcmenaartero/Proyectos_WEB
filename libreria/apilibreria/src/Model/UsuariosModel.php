@@ -38,7 +38,7 @@ class UsuariosModel {
     public static function drop($param){
         try{
             UsuariosModel::conexionDB();
-            $sql = "DELETE FROM usuarios where usuarioid = ?"
+            $sql = "DELETE FROM usuarios where usuarioid = ?";
             $data = UsuariosModel::$DB->run($sql, $param);
             return "Usuario borrado correctamente";
         }catch(Exception $e){
