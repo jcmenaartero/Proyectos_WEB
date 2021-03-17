@@ -6,7 +6,18 @@
     class UsuariosController {
     
         public function new(Request  $request, Response $response, $args){
-            $response->getBody()->write("Insercción de Nuevo Usuarios");
+            $parametros = $request->getParsedBody();
+            
+            $id = (int)$parametros['id'];
+            $nombre = $parametros['nombre'];
+            $apellidos = $parametros['apellidos'];
+            $direccion = $parametros['direccion'];
+            $ciudad = $parametros['ciudad'];
+            $nac = (int)$parametros['nacimiento'];
+            
+            $param = array($id,$nombre,$apellidos,$direccion,$ciudad,$nac);
+            $usuario = UsuariosModel::new($param);
+            $response->getBody()->write($ususario);
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);

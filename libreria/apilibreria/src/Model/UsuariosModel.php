@@ -20,7 +20,7 @@ class UsuariosModel {
             $sql = "insert into usuarios (usuarioid, nombre, apellidos, direccion, ciudad, anioNac) 
                     values (?, ?, ?, ?, ?, ?)";
             $data = UsuariosModel::$DB->run($sql, $values);
-            return "Usuario ". $param['nombre'] . " insertado correctamente ";
+            return "Usuario ". $param[1] . " insertado correctamente ";
        } catch(Exception $e){
           return $e->getMessage();
        }
