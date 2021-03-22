@@ -42,7 +42,7 @@
         }
 
         public function getLiEd($request, $response, $args){
-            $libros = LibrosModel::getAll();
+            $libros = LibrosModel::getLiEd();
             $librosJson = json_encode($libros);
             $response->getBody()->write($librosJson);
             return $response
