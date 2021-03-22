@@ -30,4 +30,10 @@ class LibrosModel {
         $data = LibrosModel::$DB->run($sql, $param);
         return $data->fetch();
     }
+    public static function getLiEd(){
+        LibrosModel::conexionDB();
+        $sql = "SELECT nombre_libro,nombre_editorial,precio,stock FROM libros NATURAL JOIN editores";
+        $data = LibrosModel::$DB->run($sql, []);
+        return $data->fetchAll();
+    }
 }

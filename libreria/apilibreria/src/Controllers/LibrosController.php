@@ -40,4 +40,18 @@
             return $response;*/
             
         }
+
+        public function getLiEd($request, $response, $args){
+            $libros = LibrosModel::getAll();
+            $librosJson = json_encode($libros);
+            $response->getBody()->write($librosJson);
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(200);
+            /*//FUNCION DE PRUEBA /index.php/api/libros
+            $response->getBody()->write("Hello, I'm your LibrosController.php file");
+            return $response;*/
+            
+        }
+
     }
