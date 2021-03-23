@@ -24,26 +24,4 @@
                 ->withStatus(200);
         }
        
-        /*public function getAll($request, $response, $args){
-            $usuario = UsuariosModel::getALL();
-            $usuarioJson = json_encode($usuario);
-            $response->getBody()->write($usuarioJson);
-            return $response
-                ->withHeader('Content-Type', 'application/json')
-                ->withStatus(200);
-        }
-
-        public function drop(Request  $request, Response $response, $args){
-            $parametros = $request->getQueryParams();
-
-            $id = (int)$parametros['id'];
-
-            $param = array($id);
-            $usuario = UsuariosModel::drop($param);
-            $usuarioJson = json_encode($usuario);
-            $response->getBody()->write($usuarioJson);
-            return $response
-                ->withHeader('Content-Type', 'application/json')
-                ->withStatus(200);
-        }*/
     }

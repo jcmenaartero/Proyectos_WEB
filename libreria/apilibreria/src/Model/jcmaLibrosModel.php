@@ -2,8 +2,7 @@
 namespace App\Model;
 use App\Config\DB;
 
-//definimos LibrosModel como una clase estática:
-//no se puede hacer un new, no hay $this, no hay método __contruct()
+
 class jcmaLibrosModel {
     private static $table = 'libros';
     private static $DB;

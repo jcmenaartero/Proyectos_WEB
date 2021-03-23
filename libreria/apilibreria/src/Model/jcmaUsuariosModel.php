@@ -25,18 +25,4 @@ class jcmaUsuariosModel {
        }
     }
 
-    /*public static function getAll(){
-        UsuariosModel::conexionDB();
-        $sql = "Select * from usuarios";
-        $data = UsuariosModel::$DB->run($sql, []);
-        return $data->fetchAll();
-    }
-
-    public static function drop($param){
-            UsuariosModel::conexionDB();
-            $sql = "DELETE FROM usuarios where usuarioid = ?";
-            $data = UsuariosModel::$DB->run($sql, $param);
-            return "Usuario borrado correctamente";
-        
-    }*/
 }
