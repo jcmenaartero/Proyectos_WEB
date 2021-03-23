@@ -24,4 +24,10 @@ class jcmaLibrosModel {
         $data = jcmaLibrosModel::$DB->run($sql, $param);
         return "Los libros de la eidtorial ". $param[2] ." han aumentado su stock en ".$param[0] ." y su precio en ". $param[1] ." mas.";
     }
+    public static function jcmagetComprados($param){
+        jcmaLibrosModel::conexionDB();
+        $sql = 'SELECT * FROM libros WHERE libro_id IN (SELECT CodigoLibro FROM detallepedidos WHERE CodigoUsuario= ?)';
+        $data = jcmaLibrosModel::$DB->run($sql, $param);
+        return $data->fetchAll();
+    }
 }

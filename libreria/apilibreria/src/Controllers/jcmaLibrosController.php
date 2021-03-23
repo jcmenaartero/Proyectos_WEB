@@ -38,4 +38,18 @@
                 ->withStatus(200);
         }
 
+        public function jcmagetComprados(Request $request, Response $response, $args){
+            $parametros = $request->getQueryParams();
+            
+            $userid = $parametros['id'];
+            
+            $param = array($userid);
+            $libros = jcmaLibrosModel::jcmagetComprados($param);
+            $librosJson = json_encode($libros);
+            $response->getBody()->write($librosJson);
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(200);
+        }
+
     }
