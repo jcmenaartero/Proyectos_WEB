@@ -4,21 +4,21 @@ use App\Config\DB;
 
 //definimos LibrosModel como una clase estática:
 //no se puede hacer un new, no hay $this, no hay método __contruct()
-class LibrosModel {
+class jcmaLibrosModel {
     private static $table = 'libros';
     private static $DB;
 
     public static function conexionDB(){
-        LibrosModel::$DB = new DB();
+        jcmaLibrosModel::$DB = new DB();
     }
-    public static function getFilter($param){
-        LibrosModel::conexionDB();
-        $sql = 'SELECT * FROM libros WHERE precio > ?';
-        $data = LibrosModel::$DB->run($sql, $param);
+    public static function jcmagetFilter($param){
+        jcmaLibrosModel::conexionDB();
+        $sql = 'SELECT * FROM libros NATURAL JOIN categorias WHERE precio > ? AND nombre_categoria = ?';
+        $data = jcmaLibrosModel::$DB->run($sql, $param);
         return $data->fetchAll();
     }
 
-    public static function getAll(){
+    /*public static function getAll(){
         LibrosModel::conexionDB();
         $sql = "Select * from libros";
         $data = LibrosModel::$DB->run($sql, []);
@@ -35,5 +35,5 @@ class LibrosModel {
         $sql = "SELECT nombre_libro,nombre_editorial,precio,stock FROM libros NATURAL JOIN editores";
         $data = LibrosModel::$DB->run($sql, []);
         return $data->fetchAll();
-    }
+    }*/
 }

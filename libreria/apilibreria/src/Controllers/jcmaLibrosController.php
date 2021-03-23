@@ -3,24 +3,17 @@
     use Psr\Http\Message\ResponseInterface as Response;
     use Psr\Http\Message\ServerRequestInterface as Request;
     //use App\Controllers\BaseController;
-    use App\Model\LibrosModel;    
+    use App\Model\jcmaLibrosModel;    
 
-    class LibrosController {
-        
-        public function new($request, $response, $args){
-            $response->getBody()->write("Insertar un nuevo Libro");
-            return $response
-                ->withHeader('Content-Type', 'application/json')
-                ->withStatus(200);
-        }
+    class jcmaLibrosController {
 
-        public function getFilter(Request $request, Response $response, $args){
+        public function jcmagetFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             //var_dump($parametros);
             $precio = $parametros['precio'];
-            //$editorial = $parametros['editorial'];
-            $param = array($precio);
-            $libros = LibrosModel::getFilter($param);
+            $categoria = $parametros['categoria'];
+            $param = array($precio,$categoria);
+            $libros = jcmaLibrosModel::jcmagetFilter($param);
             $librosJson = json_encode($libros);
             $response->getBody()->write($librosJson);
             return $response
@@ -28,6 +21,13 @@
                 ->withStatus(200);
         }
         
+        /*public function new($request, $response, $args){
+            $response->getBody()->write("Insertar un nuevo Libro");
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(200);
+        }
+
         public function getAll($request, $response, $args){
             $libros = LibrosModel::getAll();
             $librosJson = json_encode($libros);
@@ -35,9 +35,9 @@
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
-            /*//FUNCION DE PRUEBA /index.php/api/libros
+            //FUNCION DE PRUEBA /index.php/api/libros
             $response->getBody()->write("Hello, I'm your LibrosController.php file");
-            return $response;*/
+            return $response;
             
         }
 
@@ -48,10 +48,10 @@
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
-            /*//FUNCION DE PRUEBA /index.php/api/libros
+            //FUNCION DE PRUEBA /index.php/api/libros
             $response->getBody()->write("Hello, I'm your LibrosController.php file");
-            return $response;*/
+            return $response;
             
-        }
+        }*/
 
     }
