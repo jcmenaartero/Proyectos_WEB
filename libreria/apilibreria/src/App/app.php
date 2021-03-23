@@ -17,11 +17,9 @@ $app->get("/hello", function(Request $request, Response $response, $args) {
     return $response;
 });*/
  
-//Cargamos en memoria los archivos de rutas que contendrán los entrypoints a cada una de las tablas.
-//los entrypoints harán referencia a las acciones CRUD de una tabla de nuestra BD
 require __DIR__. "/../Routes/jcmalibros.php";
-require __DIR__. "/../Routes/categorias.php";
 require __DIR__. "/../Routes/jcmausuarios.php";
+require __DIR__. "/../Routes/jcmaperfiles.php";
 
 $app->run();
 
