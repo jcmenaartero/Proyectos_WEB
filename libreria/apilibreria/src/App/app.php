@@ -20,7 +20,7 @@ $app->get("/hello", function(Request $request, Response $response, $args) {
 require __DIR__. "/../Routes/jcmalibros.php";
 require __DIR__. "/../Routes/jcmausuarios.php";
 require __DIR__. "/../Routes/jcmaperfiles.php";
-require __DIR__. "/../Routes/jcmadetallepedidos.php";
+require __DIR__. "/../Routes/jcmadetalles.php";
 
 $app->run();
 
