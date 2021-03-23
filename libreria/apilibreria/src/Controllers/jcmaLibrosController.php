@@ -24,9 +24,9 @@
         public function jcmaUpdate(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
 
-            $editorid = $parametros['editorid'];
-            $stock = $parametros['stock'];
-            $precio = $parametros['precio'];
+            $editorid = (int)$parametros['editorid'];
+            $stock = (int)$parametros['stock'];
+            $precio = (double)$parametros['precio'];
 
             $param = array($stock,$precio,$editorid);
 
