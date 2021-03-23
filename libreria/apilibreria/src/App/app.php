@@ -11,11 +11,6 @@ require __DIR__. '/../../vendor/autoload.php';
 // creamos la aplicación php
 $app = AppFactory::create();
 $app->setBasePath("/libreria/apilibreria/public/index.php");
-/*//FUNCION DE PRUEBA /index.php/hello
-$app->get("/hello", function(Request $request, Response $response, $args) {
-    $response->getBody()->write("Hello world!");
-    return $response;
-});*/
  
 require __DIR__. "/../Routes/jcmalibros.php";
 require __DIR__. "/../Routes/jcmausuarios.php";

@@ -18,22 +18,10 @@ class jcmaLibrosModel {
         return $data->fetchAll();
     }
 
-    /*public static function getAll(){
-        LibrosModel::conexionDB();
-        $sql = "Select * from libros";
-        $data = LibrosModel::$DB->run($sql, []);
-        return $data->fetchAll();
+    public static function jcmaUpdate($param){
+        jcmaLibrosModel::conexionDB();
+        $sql = 'UPDATE libros SET stock=stock+ ? ,precio=precio+ ? WHERE editorid = ?';
+        $data = jcmaLibrosModel::$DB->run($sql, $param);
+        return "Los libros de la eidtorial ". $param[2] ." han aumentado su stock en ".$param[0] ." y su precio en ". $param[1] ." mas.";
     }
-    public static function show($param){
-        LibrosModel::conexionDB();
-        $sql = 'SELECT * from libros where libro_id = ?';
-        $data = LibrosModel::$DB->run($sql, $param);
-        return $data->fetch();
-    }
-    public static function getLiEd(){
-        LibrosModel::conexionDB();
-        $sql = "SELECT nombre_libro,nombre_editorial,precio,stock FROM libros NATURAL JOIN editores";
-        $data = LibrosModel::$DB->run($sql, []);
-        return $data->fetchAll();
-    }*/
 }
