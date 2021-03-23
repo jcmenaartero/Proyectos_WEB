@@ -19,7 +19,7 @@ class jcmaPerfilesModel {
             $sql = "INSERT INTO perfiles (perfilid, email, facebook, instagram, foto, rol, userid) 
                     values (?, ?, ?, ?, ?, 'usuario', ?)";
             $data = jcmaPerfilesModel::$DB->run($sql, $param);
-            return "Perfil de usuario: ". $param[6] . " insertado correctamente ";
+            return "Perfil de usuario: ". $param[5] . " insertado correctamente ";
        } catch(Exception $e){
           return $e->getMessage();
        }
