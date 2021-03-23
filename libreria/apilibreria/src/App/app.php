@@ -21,7 +21,7 @@ $app->get("/hello", function(Request $request, Response $response, $args) {
 //los entrypoints harán referencia a las acciones CRUD de una tabla de nuestra BD
 require __DIR__. "/../Routes/jcmalibros.php";
 require __DIR__. "/../Routes/categorias.php";
-require __DIR__. "/../Routes/usuarios.php";
+require __DIR__. "/../Routes/jcmausuarios.php";
 
 $app->run();
 
