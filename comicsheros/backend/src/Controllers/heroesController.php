@@ -16,5 +16,15 @@
                 ->withStatus(200);
         }
         
+        public function getHero(Request $request, Response $response, $args){
+            $parametros = $request->getQueryParams();
+            $id = $parametros['id'];
+            $heroe = heroesModel::getHero($id);
+            $heroeJson = json_encode($heroe);
+            $response->getBody()->write($heroeJson);
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(200);
+        }
 
     }

@@ -18,4 +18,10 @@ class heroesModel {
         return $data->fetchAll();
     }
 
+    public static function getHero($id){
+        heroesModel::conexionDB();
+        $sql = 'SELECT * FROM heroes WHERE ID = ? ';
+        $data = heroesModel::$DB->run($sql, $id);
+        return $data->fetchAll();
+    }
 }
