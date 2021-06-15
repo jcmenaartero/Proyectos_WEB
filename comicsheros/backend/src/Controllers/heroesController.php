@@ -19,7 +19,8 @@
         public function getHero(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             $id = $parametros['id'];
-            $heroe = heroesModel::getHero($id);
+            $param = array($id);
+            $heroe = heroesModel::getHero($param);
             $heroeJson = json_encode($heroe);
             $response->getBody()->write($heroeJson);
             return $response
