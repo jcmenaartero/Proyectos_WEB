@@ -1,5 +1,6 @@
 #urls amigables y no anteponer el index.php
 
+Access-Control-Allow-Origin: *
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
